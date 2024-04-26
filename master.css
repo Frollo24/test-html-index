@@ -1,0 +1,180 @@
+:root{
+  --background: url('./images/background.jpg');
+  --container-bg: hsla(210, 100%, 11%, 0.85);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection{
+  background-color: darkred;
+  color: white;
+}
+
+@font-face {
+  font-family: pixelFont;
+  src: url("./fonts/minecraftia-webfont.woff");
+}
+
+body {
+  background-image: var(--background); /* TODO: change background color into image */
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  font-family: pixelFont, "Lucida Console", Monaco , monospace;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 6px auto;
+  background-color: var(--container-bg);
+}
+
+@media screen and (max-width: 600px) {
+  #container{
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+header, footer {
+  background-color: hsla(240, 100%, 6%, 1);
+  text-align: center;
+}
+
+/*
+---------- LINKS ----------
+*/
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:visited {
+  color: darkred;
+  text-decoration: none;
+}
+
+a:hover{
+  color: red;
+  text-decoration: none;
+}
+
+a:active{
+  background-color: darkred;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul {
+  font-size: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: auto;
+  /**padding: 10px 0;/**/
+  list-style: none;
+  font-size: 1rem;
+}
+
+li > a {
+  display: inline-block;
+  color: red;
+  padding: 12px 30px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul li{
+    display: block;
+    font-size: 1rem;
+    line-height: 1.7rem;
+    margin: auto;
+    padding: 0;
+  }
+
+  li > a {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+nav ul li:hover{
+  background-color: white;
+}
+
+li > a:visited {
+  color: darkred;
+}
+
+li > a:hover{
+  color: red;
+}
+
+li > a:active{
+  background-color: darkred;
+  color: white;
+}
+
+main {
+  padding: 4px;
+}
+
+section {
+  float: left;
+  width: 70%;
+  min-height: 500px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  section{
+    float: none;
+    width: calc(100% - 5px);
+  }
+}
+
+article {
+  margin: 7px 2px;
+  padding: 3px;
+  background-color: #FFF7;
+}
+
+.welcome{
+  margin-top: 3px;
+}
+
+article h1 {
+  font-size: 2em;
+}
+
+article p{
+  text-align: justify;
+  color: hsla(245, 40%, 35%, 1);
+}
+
+article .under_development{
+  color: rgb(190, 40, 40);
+}
+
+aside h3 {
+  color: white;
+}
+
+footer{
+  color: white;
+  padding: 10px;
+}
+
+footer p{
+  height: 24px;
+}
